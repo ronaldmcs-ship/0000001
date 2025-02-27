@@ -1,0 +1,19 @@
+<html>
+<head>
+    <title>Test HTA Execution</title>
+    <HTA:APPLICATION 
+        APPLICATIONNAME="RunCalc"
+        SCROLL="no"
+        SINGLEINSTANCE="yes"
+        WINDOWSTATE="hide">
+    </HTA:APPLICATION>
+</head>
+<body>
+<script language="VBScript">
+    Dim objShell
+    Set objShell = CreateObject("Wscript.Shell")
+    objShell.Run "calc.exe", 0, False
+    self.close
+</script>
+</body>
+</html>
